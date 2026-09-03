@@ -1,6 +1,13 @@
 import React from 'react'
 
-export default function Tasklist({ tasks }) {
+export default function Tasklist({ tasks, updateTask, deleteTask }) {
+ 
+     const toggleComplete = (index) => {
+      const updatedTasks = { ...tasks [index], completed: !tasks[index].completed };
+      updateTask(updatedTasks, index)
+    }
+    
+
   return (
     <ul className="tasklist">
       {tasks.map((task, index) => (
