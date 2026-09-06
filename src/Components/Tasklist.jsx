@@ -11,7 +11,7 @@ export default function Tasklist({ tasks, updateTask, deleteTask }) {
   return (
     <ul className="tasklist">
       {tasks.map((task, index) => (
-        <li key={index}>
+        <li key={index} className={task.completed ? 'completed' : ''}>
           
           {/* Display task details */} 
           <div>

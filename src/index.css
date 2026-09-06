@@ -1,22 +1,271 @@
-
-
 /* Progress Tracker Styles */
 .progresstracker {
-  margin: 20px 0;
-  text-align: center;
+  margin: 24px 0;
+  padding: 18px;
+  text-align: left;
+  background: #f8f7fc;
+  border: 1px solid #ece9f5;
+  border-radius: 14px;
+}
+
+
+.progresstracker p {
+  margin: 0;
+  color: #514b69;
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
 .progressbar {
   width: 100%;
-  height: 20px;
-  background-color: #f0f0f0;
-  border-radius: 10px;
+  height: 10px;
+  margin-top: 12px;
   overflow: hidden;
-  margin-top: 10px;
+  background: #e5e1f0;
+  border-radius: 999px;
 }
 
 .progress {
   height: 100%;
-  background-color: #4caf50; /* Green color for the progress */
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, #7967d9, #a58af2);
+  border-radius: inherit;
+  transition: width 0.35s ease;
+}
+
+
+/* General Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Reset some default styles */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-width: 320px;
+  font-family: Arial, sans-serif;
+  color: #25243a;
+  background: linear-gradient(135deg, #f4f0ff, #eef7ff);
+}
+
+
+#root {
+  width: min(760px, calc(100% - 32px));
+  margin: 48px auto;
+  padding: 36px;
+  background-color: #ffffff;
+  border: 1px solid #e9e5f6;
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(69, 50, 116, 0.12);
+
+}
+
+h1 {
+  margin: 0;
+  color: #352c63;
+  font-size: 2.25rem;
+  letter-spacing: -1px;
+}
+
+h1+p {
+  margin: 8px 0 28px;
+  color: #77728f;
+}
+
+
+.taskform {
+  padding: 20px;
+  border-radius: 18px;
+  background: #f8f7fc;
+  border: 1px solid #ece9f5;
+}
+
+.taskform br {
+  display: none;
+}
+
+
+#input {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+.taskform input,
+.taskform select {
+  width: 100%;
+  padding: 13px 14px;
+  font: inherit;
+  color: #302d45;
+  background: white;
+  border: 1px solid #dcd6ec;
+  border-radius: 10px;
+  outline: none;
+}
+
+
+.taskform button {
+  padding: 13px 18px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background: #6957c8;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+
+#btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 600px) {
+  #btns {
+    flex-direction: column;
+  }
+
+    .tasklist li {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tasklist li > div:last-child {
+    width: 100%;
+  }
+
+  .tasklist li > div:last-child button {
+    flex: 1;
+  }
+}
+
+/* Task Form Styles */
+.taskform h2 {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  color: #77728f;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+
+.tasklist {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  display: grid;
+  gap: 12px;
+}
+
+
+.tasklist li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e9e5f6;
+  border-radius: 14px;
+  box-shadow: 0 5px 14px rgba(69, 50, 116, 0.06);
+  transition: 0.2s ease;
+}
+
+.tasklist li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(69, 50, 116, 0.1);
+}
+
+
+.tasklist li > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tasklist li span {
+  color: #302d45;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.tasklist li small {
+  color: #8a849e;
+  font-size: 0.82rem;
+  text-transform: capitalize;
+}
+
+.tasklist li > div:last-child {
+  display: flex;
+  gap: 8px;
+}
+
+.tasklist button {
+  padding: 9px 12px;
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tasklist button:first-child {
+  color: #23734d;
+  background: #e4f7ed;
+}
+
+.tasklist button:last-child {
+  color: #b83d4a;
+  background: #ffeaed;
+}
+
+
+.tasklist button:first-child:hover {
+  background: #c9efd9;
+}
+
+.tasklist button:last-child:hover {
+  background: #ffd6dc;
+}
+
+.tasklist li.completed {
+  background: #f5f4f8;
+  opacity: 0.72;
+}
+
+.tasklist li.completed span {
+  color: #8a849e;
+  text-decoration: line-through;
+}
+
+
+.clear {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 14px;
+  border: 1px solid #f1c8cf;
+  border-radius: 9px;
+  color: #b83d4a;
+  background: #fff7f8;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.clear:hover {
+  color: white;
+  background: #c84c5a;
+  border-color: #c84c5a;
 }
