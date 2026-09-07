@@ -6,6 +6,16 @@ TaskMan is a React-based task management application for creating, organizing, a
 
 **[Open TaskMan](https://mohammed-hamza-dev.github.io/TaskMan/)**
 
+## 📸 Screenshots
+
+### Dashboard
+
+![TaskMan Dashboard](screenshots/dashboard.png)
+
+### Task Management
+
+![TaskMan Tasks](screenshots/tasks.png)
+
 ## ✨ Features
 
 - ➕ Create new tasks
