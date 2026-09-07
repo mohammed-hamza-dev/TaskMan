@@ -10,11 +10,11 @@ TaskMan is a React-based task management application for creating, organizing, a
 
 ### Dashboard
 
-![TaskMan Dashboard](screenshots/dashboard.png)
+<img src="screenshots/dashboard.png" alt="TaskMan Dashboard" width="700"/>
 
 ### Task Management
 
-![TaskMan Tasks](screenshots/tasks.png)
+<img src="screenshots/tasks.png" alt="TaskMan Tasks" width="700"/>
 
 ## ✨ Features
 
