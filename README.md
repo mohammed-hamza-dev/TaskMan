@@ -150,3 +150,7 @@ The project demonstrates component-based development, state management, event ha
 ## 📄 License
 
 This project was created for learning and educational purposes.
+
+## 🤝 Contributing
+
+Contributions and suggestions are welcome. Feel free to open an issue or submit a pull request to improve TaskMan.
